@@ -1,34 +1,50 @@
 <?xml version="3.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.example.marcioalbuquerque.haveanicetrip.NiceTripActivity">
-
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
+    android:orientation="vertical"
+    tools:context=".NiceTripActivity"
+    >
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/TelaPrincipal"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/telaprincipal"
+        />
+
+    <EditText
+        android:id="@+id/usuario"
+        android:background="@drawable/new_design_edittext"
+        android:hint="@string/login"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginBottom="50dp" />
+        />
 
+    <EditText
+        android:id="@+id/senha"
+        android:hint="@string/senha"
+        android:background="@drawable/new_design_edittext"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:inputType="textPassword"
+        android:ems="10"
+        />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/entra"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:onClick="entrarOnClick"/>
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

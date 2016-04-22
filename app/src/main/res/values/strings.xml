@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Have a Nice Trip</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name"> Have a Nice Trip </string>
+    <string name="action_settings"> Settings </string>
+    <string name="login"> Usuário </string>
+    <string name="senha"> Senha </string>
+    <string name="entra"> Entrar ! </string>
 </resources>
