@@ -1,0 +1,129 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".NiceTripActivity"
+    >
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2">
+
+            <EditText
+                android:id="@+id/destino"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:background="@drawable/new_design_edittext"
+                android:hint="@string/destino"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/tipo_da_viagem"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:background="@drawable/new_design_edittext"
+                android:hint="@string/tipo_de_viagem"
+                android:inputType="text"/>
+
+
+            <RadioGroup
+                android:id="@+id/TipoViagem"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:transitionGroup="true"
+                >
+
+                <RadioButton
+                    android:id="@+id/lazer"
+                    android:checked="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lazer"
+                    />
+
+                <RadioButton
+                    android:id="@+id/negocios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:text="@string/negocios"
+                    />
+            </RadioGroup>
+
+            <TableRow>
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="@string/data_da_chegada"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="@string/data_da_saida"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/dataChegada"
+                    android:onClick="selecionarData"
+                    android:text="@string/selecione"
+                    android:background="@color/Butom"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    />
+                <Button
+                    android:id="@+id/dataSaida"
+                    android:onClick="selecionarData"
+                    android:text="@string/selecione"
+                    android:background="@color/Butom"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    />
+            </TableRow>
+            <TableRow>
+
+            <EditText
+                android:id="@+id/orcamento"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:inputType="numberDecimal"
+                android:hint="@string/orcamento"
+                android:background="@drawable/new_design_edittext"
+                />
+
+
+            <EditText
+                android:id="@+id/quantidadePessoas"
+                android:inputType="number"
+                android:hint="@string/quantidade_de_pessoa"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+
+                android:background="@drawable/new_design_edittext"
+                />
+            </TableRow>
+
+
+            <Button
+                android:background="@color/Butom"
+                android:onClick="salvarViagem"
+                android:text="@string/salvar"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
