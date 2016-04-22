@@ -4,4 +4,10 @@
     <string name="login"> Usuário </string>
     <string name="senha"> Senha </string>
     <string name="entra"> Entrar ! </string>
-</resources>
+    <string name="erro_autenticacao"> Usuário ou Senha Errados ! </string>
+    <string name="novos_gatos"> Novos Gastos </string>
+    <string name="nova_viagem"> Novo Viagem </string>
+    <string name="minhas_viagens"> Minhas Viagens </string>
+    <string name="configuracoes"> Configurações </string>
+
+    </resources>
