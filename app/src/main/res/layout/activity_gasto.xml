@@ -1,34 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="3.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.example.marcioalbuquerque.haveanicetrip.GastoActivity">
-
-    <android.support.design.widget.AppBarLayout
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".NiceTripActivity"
+    >
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/categoria" />
 
-    </android.support.design.widget.AppBarLayout>
+            <Spinner
+                android:id="@+id/categoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/categoria" >
+            </Spinner>
 
-    <include layout="@layout/content_gasto" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+                <TableRow>
+                    <EditText
+                        android:id="@+id/valor"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/new_design_edittext"
+                        android:inputType="numberDecimal"
+                        android:hint="@string/valor"
+                        />
+                    <Button
+                        android:id="@+id/data"
+                        android:layout_gravity="center"
+                        android:onClick="selecionarData"
+                        android:text="@string/data"
+                        android:background="@color/Butom"
+                        android:layout_marginTop="10dp"
+                        />
+                </TableRow>
 
-</android.support.design.widget.CoordinatorLayout>
+            </TableLayout>
+
+            <EditText
+                android:id="@+id/descricao"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:hint="@string/descricao"
+                android:background="@drawable/new_design_edittext"
+                android:inputType="text"
+                />
+
+            <EditText
+                android:id="@+id/local"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:hint="@string/local"
+                android:background="@drawable/new_design_edittext"
+                android:inputType="text"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="registrarGasto"
+                android:text="@string/gastei"
+                android:background="@color/Butom"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

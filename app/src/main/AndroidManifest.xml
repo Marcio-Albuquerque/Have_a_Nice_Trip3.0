@@ -29,7 +29,8 @@
         <activity
             android:name=".GastoActivity"
             android:label="@string/title_activity_gasto"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>
