@@ -21,16 +21,23 @@
         <activity
             android:name=".DashboardActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ViagemActivity"
             android:label="@string/title_activity_viagem"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".GastoActivity"
             android:label="@string/title_activity_gasto"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ViagemListActivity"
+            android:label="@string/title_activity_viagem_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GastoListActivity"
+            android:label="@string/title_activity_gasto_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
